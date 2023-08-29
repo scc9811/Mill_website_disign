@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>상품 구매</title>
+    <style>
+        /* 스타일을 추가합니다. */
+        #quantityInput {
+            display: none;
+            margin-top: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="number"] {
+            width: 50px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        /* 장바구니 담기 버튼에 스타일을 추가합니다. */
+        #buyButton button {
+            background-color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <h1>상품 정보</h1>
+    <p>상품 이름: 예시 상품</p>
+    <p>가격: $10.00</p>
+
+    <div id="buyButton">
+        <button onclick="showQuantityInput()">장바구니 담기</button>
+    </div>
+
+    <div id="quantityInput" style="display: none;">
+        <label for="quantity">수량:</label>
+        <input type="number" id="quantity" min="1" value="1">
+        <button onclick="addToCart()">장바구니에 담기</button>
+    </div>
+
+    <script>
+        function showQuantityInput() {
+            // "장바구니 담기" 버튼을 숨김
+            document.getElementById("buyButton").style.display = "none";
+            // 수량 선택 옵션을 보이도록 설정
+            document.getElementById("quantityInput").style.display = "block";
+        }
+
+        function addToCart() {
+            // 상품 정보 가져오기
+            var productName = "예시 상품"; // 상품 이름
+            var productPrice = 10.00; // 상품 가격
+            var quantity = parseInt(document.getElementById("quantity").value); // 수량 입력값 가져오기
+
+            // 장바구니에 상품 추가
+            var cartItem = {
+                name: productName,
+                price: productPrice,
+                quantity: quantity
+            };
+
+            // 장바구니에 추가한 상품 정보를 보여줄 수 있도록 원하는 방법으로 처리
+            // 예를 들면, 장바구니 배열에 추가하거나 서버로 요청을 보낼 수 있습니다.
+            // 여기서는 간단하게 콘솔에 출력합니다.
+            console.log("장바구니에 추가된 상품:", cartItem);
+
+            // 여기서는 장바구니에 추가되었음을 사용자에게 알리는 메시지를 표시할 수도 있습니다.
+            alert("상품이 장바구니에 추가되었습니다.");
+        }
+    </script>
+</body>
+</html>
