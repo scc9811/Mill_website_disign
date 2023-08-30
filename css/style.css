@@ -10,6 +10,12 @@
     src: url("../fonts/BalooChettan-Regular.ttf");
     src: url("../fonts/BalooChettan-Regular.ttf");
 }
+@font-face {
+    font-family: 'Hangeuljaemin4-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Hangeuljaemin4-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 
 
 /*****---------------------------------------- 1) font-family: 'Rajdhani', sans-serif;
@@ -229,7 +235,14 @@ button {
 /* header section start */
 
 .logo{
-    font-family: 'Great Vibes', cursive;
+    /* font-family: 'Great Vibes', cursive; */
+    font-family: 'Hangeuljaemin4-Regular', cursive;
+    font-size:30px;
+    font-weight : bold;
+    border: none;
+    outline: none;
+    background-color: #fef4ec;
+    
 }
 
 .header_section {
@@ -352,7 +365,8 @@ button {
     color: #000;
     line-height: 110px;
     padding-top: 20px;
-    font-family: 'Great Vibes', cursive;
+    /* font-family: 'Great Vibes', cursive; */
+    font-family: 'Hangeuljaemin4-Regular';
 }
 
 .banner_text {
